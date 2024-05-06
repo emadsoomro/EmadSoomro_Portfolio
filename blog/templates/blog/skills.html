@@ -1,0 +1,35 @@
+{% include "blog/header.html" %}
+
+		<section class="ftco-section" id="skills-section">
+			<div class="container">
+			<div class="row justify-content-center py-5 mt-5">
+          	<div class="col-md-12 heading-section text-center ftco-animate">
+          	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+				<h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">My Skills</h2>
+            <p>My field is totally based on Skills, I'm trying my best to learn more skills and making sure to grip on previous ones</p>
+          </div>
+        </div>
+				<div class="row">
+					{% for a in skills %}
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1">
+							<span class="icon">
+								<i class="{{a.skill_icon}}"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">{{a.skill_title}}</h3>
+							</div>
+						</a>
+					</div>
+				<style>
+					{{a.skill_icon_style}}
+				</style>
+					{% endfor %}
+
+				</div>
+			</div>
+			</div>
+		</section>
+
+{% include "blog/footer.html" %}
